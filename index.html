@@ -3,34 +3,40 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DEFINE PEPTIDOS | Documentos del producto</title>
+<title>DEFINE PÉPTIDOS | Documentos del producto</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-  :root{ --paper:#FAFAF8; --ink:#14171A; --steel:#5E6A72; --line:#E1E4E2; --white:#fff; }
+  :root{ --paper:#FAFAF8; --ink:#14171A; --steel:#5E6A72; --line:#E1E4E2; --gold:#B8935A; --white:#fff; }
   *{box-sizing:border-box}
   html{-webkit-text-size-adjust:100%}
-  body{margin:0;background:var(--paper);color:var(--ink);font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.5}
-  main{max-width:640px;margin:0 auto;padding:44px 20px 56px}
-  .logo{display:block;width:min(240px,70%);height:auto;margin:0 0 20px}
-  .lead{margin:0 0 36px;color:var(--steel);max-width:44ch}
-  .item{--accent:#14171A;border-left:4px solid var(--accent);padding:2px 0 2px 18px;margin-bottom:34px}
+  body{margin:0;padding:0 12px;background:var(--paper);color:var(--ink);font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;line-height:1.5}
+  /* Marco con líneas verticales suaves a los lados */
+  main{max-width:640px;margin:0 auto;padding:44px 22px 56px;border-left:1px solid var(--line);border-right:1px solid var(--line);min-height:100vh}
+  /* Logo centrado con líneas horizontales doradas a los lados */
+  .brand{display:flex;align-items:center;gap:16px;margin:0 0 22px}
+  .brand::before,.brand::after{content:"";flex:1;height:1px;background:var(--gold)}
+  .logo{display:block;flex:none;width:min(220px,56%);height:auto}
+  .lead{margin:0 auto 40px;color:var(--steel);max-width:36ch;text-align:center}
+  .item{--accent:#14171A;margin-bottom:40px;text-align:center}
+  .item::before{content:"";display:block;width:44px;height:3px;background:var(--accent);margin:0 auto 14px}
   .gold{--accent:#B8935A} .copper{--accent:#B66E4F} .steel{--accent:#6F8497}
   h2{margin:0;font-weight:700;font-size:1.35rem;line-height:1.2}
   .dose{margin:2px 0 14px;color:var(--steel);font-size:.95rem}
-  .docs{display:flex;flex-direction:column;gap:10px}
-  a.doc{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 16px;background:var(--white);border:1px solid var(--line);border-radius:6px;color:var(--ink);text-decoration:none;font-weight:600;min-height:52px}
-  a.doc span,.doc.pending span{color:var(--steel);font-weight:500;font-size:.85rem}
+  .docs{display:flex;flex-direction:column;gap:10px;text-align:left}
+  a.doc,.doc.pending{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 16px;border-radius:6px;font-weight:600;min-height:52px}
+  a.doc{background:var(--white);border:1px solid var(--line);color:var(--ink);text-decoration:none}
   a.doc:hover{border-color:var(--accent)}
-  .doc.pending{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:15px 16px;border:1px dashed var(--line);border-radius:6px;color:var(--steel);font-weight:500;min-height:52px}
   a.doc:focus-visible{outline:3px solid var(--ink);outline-offset:2px}
-  @media(min-width:560px){.docs{flex-direction:row}a.doc{flex:1}}
+  .doc.pending{border:1px dashed var(--line);color:var(--steel);font-weight:500}
+  .doc span{color:var(--steel);font-weight:500;font-size:.85rem}
+  @media(min-width:560px){.docs{flex-direction:row}.docs>.doc{flex:1}}
 </style>
 </head>
 <body>
 <main>
-  <img class="logo" src="logo.png" alt="DEFINE PEPTIDOS">
+  <div class="brand"><img class="logo" src="logo.png" alt="DEFINE PÉPTIDOS"></div>
   <p class="lead">Consulta el certificado de análisis y la guía de cada producto.</p>
 
   <section class="item gold">
